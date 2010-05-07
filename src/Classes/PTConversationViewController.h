@@ -27,6 +27,7 @@ typedef enum {
 @interface PTConversationViewController : PTViewController <PTConversationTableViewControllerDelegate,PTEntryBarViewControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,PTContactViewControllerDelegate> {
 
     PTConversationViewStyle             _style;
+    NSString                            *saveTitle;
     
     PTConversationTableViewController   *conversationTableViewController;
     PTEntryBarViewController            *entryBarViewController;

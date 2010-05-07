@@ -44,6 +44,8 @@
     
     CGRect rect = self.view.frame;
     
+    saveTitle = self.title;
+
     // Initialize container
     _container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     _container.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -58,7 +60,7 @@
     // Create Conversation Entry bar
     entryBarViewController = [[PTEntryBarViewController alloc] initWithStyle:PTEntryBarViewControllerStyleMedia];
     entryBarViewController.delegate = self;
-    entryBarViewController.view.frame = CGRectMake(0, rect.size.height - kEntryBarHeight, rect.size.width, kEntryBarHeight);
+    //entryBarViewController.view.frame = CGRectMake(0, rect.size.height - kEntryBarHeight, rect.size.width, kEntryBarHeight);
     entryBarViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [_container addSubview:entryBarViewController.view];
     
@@ -167,7 +169,6 @@
     UITableView *tView = self.conversationTableViewController.tableView;
     
     // Reset progress bar
-    self.title = @"";
     [self setProgress:0];
     
     
@@ -358,11 +359,18 @@
 - (void) showProgress:(BOOL)show
 {
     [self.progressView setHidden:!show];
+
+    if(show) {
+        self.title = @"";
+    } else {
+        self.title = saveTitle;
+    }
 }
 
 - (void) setProgress:(CGFloat)completed
 {
     [(UIProgressView*)[self.progressView viewWithTag:kProgresBar] setProgress:completed];
+    
 }
 
 

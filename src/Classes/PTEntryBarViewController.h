@@ -48,8 +48,8 @@ typedef enum {
     UIButton            *cameraButton;
     UIButton            *sendButton;
     BCZeroEdgeTextView  *textView;
+    UIView              *contentView;
     
-    CGFloat             frameHeight;
     
 }
 
@@ -58,6 +58,7 @@ typedef enum {
 @property (nonatomic,retain) UIButton *cameraButton;
 @property (nonatomic,retain) UIButton *sendButton;
 @property (nonatomic,retain) BCZeroEdgeTextView  *textView;
+@property (nonatomic,retain) UIView              *contentView;
 @end
 
 
