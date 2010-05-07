@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA747D9F0F9514B9006C5449 /* PTConversationView_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* PTConversationView_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		C64C6BBB1180449200952CE6 /* PTConversationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C64C6BB91180449200952CE6 /* PTConversationHelper.h */; };
+		C64C6BBC1180449200952CE6 /* PTConversationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C6BBA1180449200952CE6 /* PTConversationHelper.m */; };
+		C64C6F5711807A6700952CE6 /* PTConversationMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C64C6F5511807A6700952CE6 /* PTConversationMessage.h */; };
+		C64C6F5811807A6700952CE6 /* PTConversationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C64C6F5611807A6700952CE6 /* PTConversationMessage.m */; };
+		C65CE2BF117F293B00F21561 /* PTConversationTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2BC117F293B00F21561 /* PTConversationTableViewController.h */; };
+		C65CE2C0117F293B00F21561 /* PTConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2BD117F293B00F21561 /* PTConversationTableViewController.m */; };
+		C65CE2CE117F2A0600F21561 /* PTConversationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */; };
+		C65CE2CF117F2A0600F21561 /* PTConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */; };
+		C65CE2D8117F2A6500F21561 /* PTViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2D6117F2A6500F21561 /* PTViewController.h */; };
+		C65CE2D9117F2A6500F21561 /* PTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2D7117F2A6500F21561 /* PTViewController.m */; };
+		C65CE2E4117F2AC600F21561 /* PTEntryBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2E2117F2AC600F21561 /* PTEntryBarViewController.h */; };
+		C65CE2E5117F2AC600F21561 /* PTEntryBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2E3117F2AC600F21561 /* PTEntryBarViewController.m */; };
+		C65CE2E8117F2AF000F21561 /* PTContactViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2E6117F2AF000F21561 /* PTContactViewController.h */; };
+		C65CE2E9117F2AF000F21561 /* PTContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2E7117F2AF000F21561 /* PTContactViewController.m */; };
+		C65CE2F2117F2B3800F21561 /* PTConversationViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C65CE2F0117F2B3800F21561 /* PTConversationViewCell.h */; };
+		C65CE2F3117F2B3800F21561 /* PTConversationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE2F1117F2B3800F21561 /* PTConversationViewCell.m */; };
+		C6DDF7421185E2EA00A01150 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DDF7411185E2EA00A01150 /* AddressBook.framework */; };
+		C6DDF7441185E2EA00A01150 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DDF7431185E2EA00A01150 /* AddressBookUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA747D9E0F9514B9006C5449 /* PTConversationView_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTConversationView_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C64C6BB91180449200952CE6 /* PTConversationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTConversationHelper.h; path = Classes/PTConversationHelper.h; sourceTree = "<group>"; };
+		C64C6BBA1180449200952CE6 /* PTConversationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTConversationHelper.m; path = Classes/PTConversationHelper.m; sourceTree = "<group>"; };
+		C64C6F5511807A6700952CE6 /* PTConversationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTConversationMessage.h; path = Classes/PTConversationMessage.h; sourceTree = "<group>"; };
+		C64C6F5611807A6700952CE6 /* PTConversationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTConversationMessage.m; path = Classes/PTConversationMessage.m; sourceTree = "<group>"; };
+		C65CE2BC117F293B00F21561 /* PTConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTConversationTableViewController.h; path = Classes/PTConversationTableViewController.h; sourceTree = "<group>"; };
+		C65CE2BD117F293B00F21561 /* PTConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTConversationTableViewController.m; path = Classes/PTConversationTableViewController.m; sourceTree = "<group>"; };
+		C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTConversationViewController.h; path = Classes/PTConversationViewController.h; sourceTree = "<group>"; };
+		C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTConversationViewController.m; path = Classes/PTConversationViewController.m; sourceTree = "<group>"; };
+		C65CE2D6117F2A6500F21561 /* PTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTViewController.h; path = Classes/PTViewController.h; sourceTree = "<group>"; };
+		C65CE2D7117F2A6500F21561 /* PTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTViewController.m; path = Classes/PTViewController.m; sourceTree = "<group>"; };
+		C65CE2E2117F2AC600F21561 /* PTEntryBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTEntryBarViewController.h; path = Classes/PTEntryBarViewController.h; sourceTree = "<group>"; };
+		C65CE2E3117F2AC600F21561 /* PTEntryBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTEntryBarViewController.m; path = Classes/PTEntryBarViewController.m; sourceTree = "<group>"; };
+		C65CE2E6117F2AF000F21561 /* PTContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTContactViewController.h; path = Classes/PTContactViewController.h; sourceTree = "<group>"; };
+		C65CE2E7117F2AF000F21561 /* PTContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTContactViewController.m; path = Classes/PTContactViewController.m; sourceTree = "<group>"; };
+		C65CE2F0117F2B3800F21561 /* PTConversationViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTConversationViewCell.h; path = Classes/PTConversationViewCell.h; sourceTree = "<group>"; };
+		C65CE2F1117F2B3800F21561 /* PTConversationViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTConversationViewCell.m; path = Classes/PTConversationViewCell.m; sourceTree = "<group>"; };
+		C6DDF7411185E2EA00A01150 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		C6DDF7431185E2EA00A01150 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libPTConversationView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPTConversationView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				C6DDF7421185E2EA00A01150 /* AddressBook.framework in Frameworks */,
+				C6DDF7441185E2EA00A01150 /* AddressBookUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libPTConversationView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* PTConversationView */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+				C6DDF7411185E2EA00A01150 /* AddressBook.framework */,
+				C6DDF7431185E2EA00A01150 /* AddressBookUI.framework */,
+			);
+			name = PTConversationView;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C64C6F5511807A6700952CE6 /* PTConversationMessage.h */,
+				C64C6F5611807A6700952CE6 /* PTConversationMessage.m */,
+				C64C6BB91180449200952CE6 /* PTConversationHelper.h */,
+				C64C6BBA1180449200952CE6 /* PTConversationHelper.m */,
+				C65CE2E1117F2A9A00F21561 /* Views */,
+				C65CE2E0117F2A9300F21561 /* Controllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* PTConversationView_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		C65CE2E0117F2A9300F21561 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C65CE2BC117F293B00F21561 /* PTConversationTableViewController.h */,
+				C65CE2BD117F293B00F21561 /* PTConversationTableViewController.m */,
+				C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */,
+				C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */,
+				C65CE2D6117F2A6500F21561 /* PTViewController.h */,
+				C65CE2D7117F2A6500F21561 /* PTViewController.m */,
+				C65CE2E2117F2AC600F21561 /* PTEntryBarViewController.h */,
+				C65CE2E3117F2AC600F21561 /* PTEntryBarViewController.m */,
+				C65CE2E6117F2AF000F21561 /* PTContactViewController.h */,
+				C65CE2E7117F2AF000F21561 /* PTContactViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C65CE2E1117F2A9A00F21561 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C65CE2F0117F2B3800F21561 /* PTConversationViewCell.h */,
+				C65CE2F1117F2B3800F21561 /* PTConversationViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* PTConversationView_Prefix.pch in Headers */,
+				C65CE2BF117F293B00F21561 /* PTConversationTableViewController.h in Headers */,
+				C65CE2CE117F2A0600F21561 /* PTConversationViewController.h in Headers */,
+				C65CE2D8117F2A6500F21561 /* PTViewController.h in Headers */,
+				C65CE2E4117F2AC600F21561 /* PTEntryBarViewController.h in Headers */,
+				C65CE2E8117F2AF000F21561 /* PTContactViewController.h in Headers */,
+				C65CE2F2117F2B3800F21561 /* PTConversationViewCell.h in Headers */,
+				C64C6BBB1180449200952CE6 /* PTConversationHelper.h in Headers */,
+				C64C6F5711807A6700952CE6 /* PTConversationMessage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* PTConversationView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "PTConversationView" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTConversationView;
+			productName = PTConversationView;
+			productReference = D2AAC07E0554694100DB518D /* libPTConversationView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "PTConversationView" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* PTConversationView */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* PTConversationView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65CE2C0117F293B00F21561 /* PTConversationTableViewController.m in Sources */,
+				C65CE2CF117F2A0600F21561 /* PTConversationViewController.m in Sources */,
+				C65CE2D9117F2A6500F21561 /* PTViewController.m in Sources */,
+				C65CE2E5117F2AC600F21561 /* PTEntryBarViewController.m in Sources */,
+				C65CE2E9117F2AF000F21561 /* PTContactViewController.m in Sources */,
+				C65CE2F3117F2B3800F21561 /* PTConversationViewCell.m in Sources */,
+				C64C6BBC1180449200952CE6 /* PTConversationHelper.m in Sources */,
+				C64C6F5811807A6700952CE6 /* PTConversationMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/PTConversationView.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PTConversationView_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = PTConversationView;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/PTConversationView.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PTConversationView_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = PTConversationView;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "PTConversationView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "PTConversationView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
