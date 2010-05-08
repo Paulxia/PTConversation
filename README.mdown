@@ -1,0 +1,32 @@
+PTConversation
+==========
+
+PTConversation is a SMS style conversation view implemented for iPhone/iPod touch.
+
+
+![](files.me.com/lashad/0uo1z5) 
+![](files.me.com/lashad/2151cq) 
+
+
+How to add to your project
+----------
+
+PTConversation view is a static library and we can simply add it to your project as XCode dependency project.
+
+- Clone PTConversation project from `git clone git://github.com:lashad/PTConversation.git`
+  Make sure you store in a permanent place because Xcode will need to reference the files every time you compile your project.
+
+- Drag PTConversationView.xcodeproj file under 'PTConversation/src' and drop it onto the root of your XCode project's "Groups and Files" sidebar. In dialog box make sure 'Copy items' is unchecked and 'Reference Type' is 'Relative to Project'.
+
+- Link static library PTConversationView.xcodeproj/libPTConversationView.a. First Expand the 'Targets => You project Name' section.
+ Then drag libPTConversationView.a item and drop it onto the 'Link Binary With Libraries' item.
+
+- We need to add PTConversation as a dependency of your project. Expand the 'Targets' section of the sidebar and double click your application's target. Under the 'General' tab you will see a 'Direct Dependencies' section. Click the + button, select 'PTConversationView', and click 'Add Target'.
+
+- We need to add the bundle of images to your project. Drag 'PTConversationView.bundle' under 'PTConversation/src' and drop it into your project. In dialog box make sure 'Create Folder References' is selected, 'Copy items' is unchecked, and 'Reference Type' is 'Relative to Project'. Then click 'Add'.
+
+- We need to add the AddressBook and AddressBookUI frameworks into your project. Double click your application's target under 'Targets' section. In 'General' tab you will see a 'Linked Libraries' section. Click the + button, select AddressBook and AddressBookUI frameworks and click 'Add'.
+
+- Under 'Build' tab search 'Header Search Paths'. Add the relative path from your project's directory to the 'PTConversation/src' directory.
+
+- Finally you need to #import "PTConversation/PTConversationViewController.h" anywhere in your project.
