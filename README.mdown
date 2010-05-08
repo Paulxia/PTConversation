@@ -4,8 +4,8 @@ PTConversation
 PTConversation is a SMS style conversation view implemented for iPhone/iPod touch.
 
 
-![](files.me.com/lashad/0uo1z5) 
-![](files.me.com/lashad/2151cq) 
+![](http://files.me.com/lashad/0uo1z5) 
+![](http://files.me.com/lashad/2151cq) 
 
 
 How to add to your project
