@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PTConversationViewController.h"
+#import "PTConversation/PTConversationViewController.h"
 
 @interface RootViewController : UITableViewController <PTConversationViewControllerDelegate> {
 	
