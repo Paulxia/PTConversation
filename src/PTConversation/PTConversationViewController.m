@@ -6,8 +6,7 @@
 //  Copyright 2010 Picktek LLC. All rights reserved.
 //
 
-#import "PTConversationViewController.h"
-
+#import "PTConversationViewController.h"``
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Private Methods
@@ -214,11 +213,18 @@
 
 - (void)chooseDialog
 {
+    NSString *title = @"Take Photo";
+    
+    NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];     
+    if([mediaTypes containsObject:@"public.movie"]) {
+        title = @"Take Photo or Video";
+    }
+    
 	// open a dialog with Reload and Cabcel button
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
                                                              delegate:self cancelButtonTitle:@"Cancel" 
                                                destructiveButtonTitle:nil 
-                                                    otherButtonTitles:@"Take Photo", @"Choose From Library", nil];
+                                                    otherButtonTitles:title, @"Choose From Library", nil];
     
     
     
@@ -243,8 +249,16 @@
                 imagePicker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
             }
             
-            imagePicker.mediaTypes =[UIImagePickerController availableMediaTypesForSourceType:imagePicker.sourceType];     
-            imagePicker.allowsImageEditing = YES;
+            imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:imagePicker.sourceType];     
+            
+            if([imagePicker.mediaTypes containsObject:@"public.movie"]) {
+#ifdef __IPHONE_3_1
+                imagePicker.allowsEditing = YES;
+                imagePicker.videoMaximumDuration = 180; // 3min
+#else
+                imagePicker.allowsImageEditing = YES;
+#endif
+            }
             
             [self presentModalViewController:imagePicker animated:YES];
         }
@@ -264,12 +278,14 @@
 {
     BOOL send = TRUE;
     
-    [picker dismissModalViewControllerAnimated:YES];
-    
-    PTConversationMessage *message = [PTConversationHelper mediaInfoToMessage:info 
+    PTConversationMessage *message = [PTConversationHelper mediaInfoToMessage:picker 
+                                                                         info:info 
                                                                          text:self.entryBarViewController.textView.text 
                                                                          type:PTConversationMessageTypeOutgoing]; 
     UITableView *tView = self.conversationTableViewController.tableView;
+    
+    
+    [picker dismissModalViewControllerAnimated:YES];
     
     send = [self.delegate messageWillSend:self tableView:tView message:message];
     if(send) {

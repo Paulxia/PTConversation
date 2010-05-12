@@ -60,6 +60,30 @@
     return self.mediaType == PTConversationMessageMediaTypeVideo;
 }
 
+- (NSInteger) videoSize
+{
+    NSInteger videoFileSize = -1;
+    BOOL isDirectory;
+    NSFileManager *filemanager = [[NSFileManager alloc]init];
+    if([filemanager fileExistsAtPath:[video path] isDirectory:&isDirectory]){
+        NSDictionary * attributes = [filemanager attributesOfItemAtPath:[video path] error:nil];
+        
+        NSNumber *theFileSize;
+        if (theFileSize = [attributes objectForKey:NSFileSize]) {
+            videoFileSize = [theFileSize intValue];
+        }
+        
+        videoFileSize = [theFileSize longValue];
+        
+        NSLog(@"Video File Size %d", videoFileSize);
+        
+    }
+    
+    [filemanager release];
+    
+    return videoFileSize;
+}
+
 - (id)init
 {
     if (self = [super init]) {

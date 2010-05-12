@@ -52,5 +52,5 @@ typedef enum {
 + (PTConversationMessage*)initWithText:(NSString*)text type:(PTConversationMessageType)type date:(NSDate*)date;
 - (BOOL) isImage;
 - (BOOL) isVideo;
-
+- (NSInteger) videoSize;
 @end

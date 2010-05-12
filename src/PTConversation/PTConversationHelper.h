@@ -20,7 +20,8 @@
 + (void) dumpRange:(NSRange)range;
 + (NSString*) pathForBundleResource:(NSString *)relativePath;
 + (NSString*)toConversationDateString:(NSDate *)date;
-+ (PTConversationMessage*)mediaInfoToMessage:(NSDictionary *)info text:(NSString*)text type:(PTConversationMessageType)type;
++ (PTConversationMessage*)mediaInfoToMessage:(UIImagePickerController *)picker info:(NSDictionary *)info text:(NSString*)text type:(PTConversationMessageType)type;
++ (UIImage*)toThumbnail:(UIImagePickerController *)picker;
 + (NSString*)getLatestFileFromPath:(NSString*)path extention:(NSString*)extention;
 
 @end

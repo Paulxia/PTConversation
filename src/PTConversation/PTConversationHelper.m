@@ -66,7 +66,7 @@
 // Populates PTConversationMessage object from media picker info dictionary (see UIImagePickerController)
 // This method is called from didFinishPickingMediaWithInfo 
 //
-+ (PTConversationMessage*)mediaInfoToMessage:(NSDictionary *)info text:(NSString*)text type:(PTConversationMessageType)type
++ (PTConversationMessage*)mediaInfoToMessage:(UIImagePickerController *)picker info:(NSDictionary *)info text:(NSString*)text type:(PTConversationMessageType)type
 {
     UIImage *thumbnailImage;
     PTConversationMessage *message = [[PTConversationMessage alloc] init];
@@ -124,10 +124,12 @@
             thumbnailPath = [thumbnailPath stringByDeletingLastPathComponent];
         }
         
-        NSString *jpgFilePath = [PTConversationHelper getLatestFileFromPath:thumbnailPath extention:@"jpg"];
+        //NSString *jpgFilePath = [PTConversationHelper getLatestFileFromPath:thumbnailPath extention:@"jpg"];
+        
+        thumbnailImage = [self toThumbnail:picker];
         
         // Set thumbnail image
-        thumbnailImage = [[UIImage imageWithContentsOfFile:jpgFilePath] _imageScaledToSize:CGSizeMake(60.0f, 60.0f) interpolationQuality:1];
+        thumbnailImage = [thumbnailImage _imageScaledToSize:CGSizeMake(60.0f, 60.0f) interpolationQuality:1];
         [message setThumbnailImage:thumbnailImage];
         //[thumbnailImage release];
 
@@ -137,16 +139,36 @@
     return message;
 }
 
+
++ (UIImage*)toThumbnail:(UIImagePickerController *)picker
+{
+    UIView *v = picker.view;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    UIGraphicsBeginImageContext(screenRect.size);
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext(); [[UIColor blackColor] set]; CGContextFillRect(ctx, screenRect);
+    
+    [v.layer renderInContext:ctx];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    CGImageRef tmp = CGImageCreateWithImageInRect([newImage CGImage], CGRectMake(0, 105, 320, 300));
+    
+    return [UIImage imageWithCGImage:tmp];
+}
+
 // Get latest file from given path
 // 
 + (NSString*)getLatestFileFromPath:(NSString*)path extention:(NSString*)extention
 {
-    NSString *file,*latestFile;
+    NSString *file = nil, *latestFile = nil;
     NSDate *latestDate = [NSDate distantPast];
     NSDirectoryEnumerator *dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:path];
     
     while (file = [dirEnum nextObject]) {
-        
         // Only check files with given extension.
         if ([[file pathExtension] isEqualToString:extention]) {
             // Check if current jpg file is the latest one.
@@ -158,7 +180,6 @@
     }
     
     latestFile = [path stringByAppendingPathComponent:latestFile];
-    //NSLog(@"****** The latest file should be this one: %@", latestFile);
     
     return latestFile;
 }
