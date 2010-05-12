@@ -8,6 +8,7 @@
 
 #import "PTConversationViewController.h"
 
+
 ///////////////////////////////////////////////////////////////////////////////////
 // Private Methods
 @interface PTConversationViewController (Private)
@@ -35,12 +36,15 @@
 }
 
 
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.autoresizesForKeyboard = YES;
+    
+    self.navigationItem.backBarButtonItem = nil;
     
     CGRect rect = self.view.frame;
     
@@ -69,7 +73,7 @@
     contactViewController.delegate = self;
     [contactViewController.view setHidden:!self.showContact];
     contactViewController.view.frame = CGRectMake(0, 0, rect.size.width, kContactPickerHeight);
-    contactViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;// | UIViewAutoresizingFlexibleTopMargin;
+    contactViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth; // | UIViewAutoresizingFlexibleTopMargin;
     [_container addSubview:contactViewController.view];
     
     [self.view addSubview:_container];

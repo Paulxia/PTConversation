@@ -16,7 +16,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1142,
+					1123,
 					20,
 					48,
 					43,
@@ -55,20 +55,107 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 294997025;
-			PBXWorkspaceStateSaveDate = 294997025;
+			PBXPerProjectTemplateStateSaveDate = 295356047;
+			PBXWorkspaceStateSaveDate = 295356047;
 		};
 		perUserProjectItems = {
+			C62F4F82119AC7A300AAF5E5 /* PBXTextBookmark */ = C62F4F82119AC7A300AAF5E5 /* PBXTextBookmark */;
+			C62F4F83119AC7A300AAF5E5 /* XCBuildMessageTextBookmark */ = C62F4F83119AC7A300AAF5E5 /* XCBuildMessageTextBookmark */;
+			C62F4F84119AC7A300AAF5E5 /* PBXTextBookmark */ = C62F4F84119AC7A300AAF5E5 /* PBXTextBookmark */;
+			C63C86221199640000498DBD /* PBXTextBookmark */ = C63C86221199640000498DBD /* PBXTextBookmark */;
+			C63C86D61199698700498DBD /* PBXTextBookmark */ = C63C86D61199698700498DBD /* PBXTextBookmark */;
+			C63C870511996AE100498DBD /* PBXTextBookmark */ = C63C870511996AE100498DBD /* PBXTextBookmark */;
+			C63C873C1199784D00498DBD /* PBXTextBookmark */ = C63C873C1199784D00498DBD /* PBXTextBookmark */;
 			C6E07E4811954B6D00C7D659 /* PBXTextBookmark */ = C6E07E4811954B6D00C7D659 /* PBXTextBookmark */;
 			C6E07E4911954B6D00C7D659 /* PBXTextBookmark */ = C6E07E4911954B6D00C7D659 /* PBXTextBookmark */;
 			C6E07E4A11954B6D00C7D659 /* PBXTextBookmark */ = C6E07E4A11954B6D00C7D659 /* PBXTextBookmark */;
 			C6E07E4B11954B6D00C7D659 /* PBXTextBookmark */ = C6E07E4B11954B6D00C7D659 /* PBXTextBookmark */;
-			C6E07E4D11954B6D00C7D659 /* PBXTextBookmark */ = C6E07E4D11954B6D00C7D659 /* PBXTextBookmark */;
-			C6E07EBA11954C2300C7D659 /* PBXTextBookmark */ = C6E07EBA11954C2300C7D659 /* PBXTextBookmark */;
 		};
 		sourceControlManager = C65CE26D117F12A100F21561 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	C62F4F82119AC7A300AAF5E5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */;
+		name = "PTConversationViewController.m: 68";
+		rLen = 31;
+		rLoc = 2439;
+		rType = 0;
+		vrLen = 2058;
+		vrLoc = 1003;
+	};
+	C62F4F83119AC7A300AAF5E5 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "PTNavigationController.h: No such file or directory";
+		fRef = C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 9;
+		rType = 1;
+	};
+	C62F4F84119AC7A300AAF5E5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */;
+		name = "PTConversationViewController.h: 10";
+		rLen = 0;
+		rLoc = 186;
+		rType = 0;
+		vrLen = 1196;
+		vrLoc = 0;
+	};
+	C63C857C11995B3200498DBD /* PTNavigationController.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = PTNavigationController.m;
+		path = /Users/lashad/MyProjects/iPhone/PTConversation/src/PTConversation/PTNavigationController.m;
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 1742}}";
+			sepNavSelRange = "{342, 0}";
+			sepNavVisRange = "{829, 1164}";
+		};
+	};
+	C63C86221199640000498DBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE2E3117F2AC600F21561 /* PTEntryBarViewController.m */;
+		name = "PTEntryBarViewController.m: 52";
+		rLen = 17;
+		rLoc = 1243;
+		rType = 0;
+		vrLen = 1185;
+		vrLoc = 875;
+	};
+	C63C86D61199698700498DBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE2E7117F2AF000F21561 /* PTContactViewController.m */;
+		name = "PTContactViewController.m: 59";
+		rLen = 0;
+		rLoc = 1648;
+		rType = 0;
+		vrLen = 1674;
+		vrLoc = 814;
+	};
+	C63C870511996AE100498DBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE2BD117F293B00F21561 /* PTConversationTableViewController.m */;
+		name = "PTConversationTableViewController.m: 25";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 163;
+	};
+	C63C873C1199784D00498DBD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C63C857C11995B3200498DBD /* PTNavigationController.m */;
+		name = "PTNavigationController.m: 102";
+		rLen = 8;
+		rLoc = 3200;
+		rType = 0;
+		vrLen = 1039;
+		vrLoc = 2694;
 	};
 	C64C6BB91180449200952CE6 /* PTConversationHelper.h */ = {
 		uiCtxt = {
@@ -122,23 +209,23 @@
 	};
 	C65CE2BD117F293B00F21561 /* PTConversationTableViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1320, 1651}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1301, 1677}}";
 			sepNavSelRange = "{392, 0}";
-			sepNavVisRange = "{163, 1287}";
+			sepNavVisRange = "{163, 1049}";
 		};
 	};
 	C65CE2CC117F2A0600F21561 /* PTConversationViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1790, 1352}}";
-			sepNavSelRange = "{917, 9}";
-			sepNavVisRange = "{161, 1533}";
+			sepNavIntBoundsRect = "{{0, 0}, {1790, 1339}}";
+			sepNavSelRange = "{186, 0}";
+			sepNavVisRange = "{0, 1196}";
 		};
 	};
 	C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1320, 5733}}";
-			sepNavSelRange = "{11951, 0}";
-			sepNavVisRange = "{11604, 1024}";
+			sepNavIntBoundsRect = "{{0, 0}, {1301, 5200}}";
+			sepNavSelRange = "{2439, 31}";
+			sepNavVisRange = "{1003, 2058}";
 		};
 	};
 	C65CE2D6117F2A6500F21561 /* PTViewController.h */ = {
@@ -164,9 +251,9 @@
 	};
 	C65CE2E3117F2AC600F21561 /* PTEntryBarViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 3497}}";
-			sepNavSelRange = "{6452, 0}";
-			sepNavVisRange = "{5181, 1221}";
+			sepNavIntBoundsRect = "{{0, 0}, {1301, 3302}}";
+			sepNavSelRange = "{1243, 17}";
+			sepNavVisRange = "{875, 1185}";
 		};
 	};
 	C65CE2E6117F2AF000F21561 /* PTContactViewController.h */ = {
@@ -178,9 +265,9 @@
 	};
 	C65CE2E7117F2AF000F21561 /* PTContactViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1172, 1443}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1301, 1404}}";
 			sepNavSelRange = "{1648, 0}";
-			sepNavVisRange = "{760, 1728}";
+			sepNavVisRange = "{814, 1674}";
 		};
 	};
 	C65CE2F0117F2B3800F21561 /* PTConversationViewCell.h */ = {
@@ -236,26 +323,6 @@
 		rType = 0;
 		vrLen = 1804;
 		vrLoc = 0;
-	};
-	C6E07E4D11954B6D00C7D659 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */;
-		name = "PTConversationViewController.m: 348";
-		rLen = 0;
-		rLoc = 11951;
-		rType = 0;
-		vrLen = 1025;
-		vrLoc = 11604;
-	};
-	C6E07EBA11954C2300C7D659 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C65CE2CD117F2A0600F21561 /* PTConversationViewController.m */;
-		name = "PTConversationViewController.m: 348";
-		rLen = 0;
-		rLoc = 11951;
-		rType = 0;
-		vrLen = 1024;
-		vrLoc = 11604;
 	};
 	D2AAC07D0554694100DB518D /* PTConversationView */ = {
 		activeExec = 0;

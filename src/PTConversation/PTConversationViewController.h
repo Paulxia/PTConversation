@@ -44,6 +44,7 @@ typedef enum {
     UIProgressView                      *progressView;
     
     PTConversationMessage               *currentSelectedMessage;
+    
 }
 
 /**
