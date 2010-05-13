@@ -251,10 +251,10 @@
             
             if([imagePicker.mediaTypes containsObject:@"public.movie"]) {
 #ifdef __IPHONE_3_1
-                imagePicker.allowsEditing = YES;
+                //imagePicker.allowsEditing = YES;
                 imagePicker.videoMaximumDuration = 180; // 3min
 #else
-                imagePicker.allowsImageEditing = YES;
+                //imagePicker.allowsImageEditing = YES;
 #endif
             }
             
