@@ -43,8 +43,6 @@
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.autoresizesForKeyboard = YES;
     
-    self.navigationItem.backBarButtonItem = nil;
-    
     CGRect rect = self.view.frame;
     
     saveTitle = self.title;
