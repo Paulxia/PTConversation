@@ -166,7 +166,7 @@
     }
     
     // Minimum Entry Bar height is kMessageBarHeight pixel
-    if(self.contentView.frame.size.height != finalHeight && (finalHeight >= 0 && finalHeight <= 36)) {
+    if(self.contentView.frame.size.height != finalHeight && (finalHeight >= 0 && finalHeight <= 18)) {
         
         // Start animation
         [UIView beginAnimations:nil context:NULL];
