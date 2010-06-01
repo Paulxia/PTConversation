@@ -155,7 +155,7 @@
 
 - (void)touchAttention:(PTConversationTableViewController *)controller message:(PTConversationMessage*)message
 {
-    currentSelectedMessage = message;
+    //self.currentSelectedMessage = message;
     [self.delegate touchAttention:self tableView:self.conversationTableViewController.tableView message:message];
 }
 
@@ -173,7 +173,7 @@
     [self setProgress:0];
     
     // Save current massage
-    currentSelectedMessage = message;
+    self.currentSelectedMessage = message;
     
     send = [self.delegate messageWillSend:self tableView:tView message:message];
     if(send) {
@@ -253,7 +253,7 @@
             
             if([imagePicker.mediaTypes containsObject:@"public.movie"]) {
 //#ifdef __IPHONE_3_1
-                imagePicker.allowsEditing = YES;
+                //imagePicker.allowsEditing = YES;
                 imagePicker.videoMaximumDuration = 180; // 3min
 //#else
                 //imagePicker.allowsImageEditing = YES;
@@ -289,7 +289,7 @@
     [picker dismissModalViewControllerAnimated:YES];
     
     // Save current massage
-    currentSelectedMessage = message;
+    self.currentSelectedMessage = message;
     
     send = [self.delegate messageWillSend:self tableView:tView message:message];
     if(send) {
@@ -410,6 +410,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.currentSelectedMessage = nil;
     self.conversationTableViewController = nil;
     self.entryBarViewController = nil;
     self.contactViewController = nil;
@@ -423,6 +424,7 @@
     
     self.autoresizesForKeyboard = NO;
     
+    [currentSelectedMessage release];
     [entryBarViewController release];
     [conversationTableViewController release];
     [contactViewController release];

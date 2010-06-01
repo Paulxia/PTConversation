@@ -57,7 +57,7 @@ typedef enum {
 @property(nonatomic,retain) PTContactViewController *contactViewController;
 @property(nonatomic,assign) id<PTConversationViewControllerDelegate> delegate;
 @property(nonatomic,readonly) UIProgressView *progressView;
-@property(nonatomic,readonly) PTConversationMessage *currentSelectedMessage;
+@property(nonatomic,retain) PTConversationMessage *currentSelectedMessage;
 @property(nonatomic,assign) BOOL showContact;
 
 - (void) becomeEntryBar;

@@ -145,7 +145,7 @@
     
     [viewBackground release];
     [viewRoundedImage release];
-    [textView release];
+    //[textView release];
 }
 
 
