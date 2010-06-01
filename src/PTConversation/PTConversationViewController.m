@@ -172,6 +172,8 @@
     // Reset progress bar
     [self setProgress:0];
     
+    // Save current massage
+    currentSelectedMessage = message;
     
     send = [self.delegate messageWillSend:self tableView:tView message:message];
     if(send) {
@@ -250,12 +252,13 @@
             imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:imagePicker.sourceType];     
             
             if([imagePicker.mediaTypes containsObject:@"public.movie"]) {
-#ifdef __IPHONE_3_1
-                //imagePicker.allowsEditing = YES;
+//#ifdef __IPHONE_3_1
+                imagePicker.allowsEditing = YES;
                 imagePicker.videoMaximumDuration = 180; // 3min
-#else
+//#else
                 //imagePicker.allowsImageEditing = YES;
-#endif
+                
+//#endif
             }
             
             [self presentModalViewController:imagePicker animated:YES];
@@ -284,6 +287,9 @@
     
     
     [picker dismissModalViewControllerAnimated:YES];
+    
+    // Save current massage
+    currentSelectedMessage = message;
     
     send = [self.delegate messageWillSend:self tableView:tView message:message];
     if(send) {
