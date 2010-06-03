@@ -26,17 +26,17 @@
 
 + (PTConversationMessage*)initWithText:(NSString*)text type:(PTConversationMessageType)type date:(NSDate*)date thumbnailImage:(UIImage*)thumbnailImage
 {
-    return [PTConversationMessage initWithText:text type:type date:[NSDate date] sendFailed:FALSE thumbnailImage:nil];
+    return [PTConversationMessage initWithText:text type:type date:date sendFailed:FALSE thumbnailImage:nil];
 }
 
 + (PTConversationMessage*)initWithText:(NSString*)text type:(PTConversationMessageType)type date:(NSDate*)date sendFailed:(BOOL)sendFailed
 {
-    return [PTConversationMessage initWithText:text type:type date:[NSDate date] sendFailed:sendFailed thumbnailImage:nil];    
+    return [PTConversationMessage initWithText:text type:type date:date sendFailed:sendFailed thumbnailImage:nil];    
 }
 
 + (PTConversationMessage*)initWithText:(NSString*)text type:(PTConversationMessageType)type date:(NSDate*)date
 {
-    return [PTConversationMessage initWithText:text type:type date:[NSDate date] sendFailed:FALSE thumbnailImage:nil];    
+    return [PTConversationMessage initWithText:text type:type date:date sendFailed:FALSE thumbnailImage:nil];    
 }
 
 + (PTConversationMessage*)initWithText:(NSString*)text type:(PTConversationMessageType)type date:(NSDate*)date sendFailed:(BOOL)sendFailed thumbnailImage:(UIImage*)thumbnailImage;
