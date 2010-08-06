@@ -8,10 +8,75 @@
 
 #import "PTConversationHelper.h"
 
-// Warning about _imageScaledToSize should be go away 
-@interface UIImage (Private)
-- (UIImage*) _imageScaledToSize:(CGSize)size interpolationQuality:(int)interpolationQuality;
-@end
+
+@interface UIImage (Extras)
+- (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize;
+@end;
+
+@implementation UIImage (Extras)
+
+- (UIImage *)imageByScalingProportionallyToSize:(CGSize)targetSize {
+    
+    UIImage *sourceImage = self;
+    UIImage *newImage = nil;
+    
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO) {
+        
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor < heightFactor) 
+            scaleFactor = widthFactor;
+        else
+            scaleFactor = heightFactor;
+        
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // center the image
+        
+        if (widthFactor < heightFactor) {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5; 
+        } else if (widthFactor > heightFactor) {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    
+    // this is actually the interesting part:
+    
+    UIGraphicsBeginImageContext(targetSize);
+    
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    if(newImage == nil) NSLog(@"could not scale image");
+    
+    
+    return newImage ;
+}
+
+@end;
 
 @implementation PTConversationHelper
 
@@ -98,7 +163,7 @@
         
         // Set thumbnail image
         thumbnailImage = [[UIImage alloc] initWithData:UIImagePNGRepresentation(image)];
-        thumbnailImage = [thumbnailImage _imageScaledToSize:CGSizeMake(60.0f, 60.0f) interpolationQuality:1];
+        thumbnailImage = [thumbnailImage imageByScalingProportionallyToSize:CGSizeMake(60.0f, 60.0f)];
         [message setThumbnailImage:thumbnailImage];
         //[thumbnailImage release];
         NSLog(@"--------------------- thumbnailImage size %f", thumbnailImage.size.width);
@@ -129,7 +194,8 @@
         thumbnailImage = [self toThumbnail:picker];
         
         // Set thumbnail image
-        thumbnailImage = [thumbnailImage _imageScaledToSize:CGSizeMake(60.0f, 60.0f) interpolationQuality:1];
+        thumbnailImage = [thumbnailImage imageByScalingProportionallyToSize:CGSizeMake(60.0f, 60.0f)];
+        //thumbnailImage = [thumbnailImage _imageScaledToSize:CGSizeMake(60.0f, 60.0f) interpolationQuality:1];
         [message setThumbnailImage:thumbnailImage];
         //[thumbnailImage release];
 

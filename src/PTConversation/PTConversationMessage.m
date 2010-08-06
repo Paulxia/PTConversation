@@ -75,7 +75,7 @@
         
         videoFileSize = [theFileSize longValue];
         
-        NSLog(@"Video File Size %d", videoFileSize);
+        //NSLog(@"Video File Size %d", videoFileSize);
         
     }
     
