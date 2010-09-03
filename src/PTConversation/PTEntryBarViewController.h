@@ -16,7 +16,7 @@
 #define kPTEntryBarCameraButtonTag      102
 #define kPTEntryBarSendButtonTag        103
 
-#define kSendButtonTitle                @"Send"
+#define kSendButtonTitle                NSLocalizedString(@"Send", @"")
 
 typedef enum {
     PTEntryBarViewControllerStyleSimple = 0,

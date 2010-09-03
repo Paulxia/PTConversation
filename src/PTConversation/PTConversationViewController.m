@@ -213,18 +213,18 @@
 
 - (void)chooseDialog
 {
-    NSString *title = @"Take Photo";
+    NSString *title = NSLocalizedString(@"TakePhoto", @"");
     
     NSArray *mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];     
     if([mediaTypes containsObject:@"public.movie"]) {
-        title = @"Take Photo or Video";
+        title = NSLocalizedString(@"TakePhotoOrVideo", @"");
     }
     
 	// open a dialog with Reload and Cabcel button
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
-                                                             delegate:self cancelButtonTitle:@"Cancel" 
+                                                             delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", @"") 
                                                destructiveButtonTitle:nil 
-                                                    otherButtonTitles:title, @"Choose From Library", nil];
+                                                    otherButtonTitles:title, NSLocalizedString(@"ChooseFromLibrary", @""), nil];
     
     
     
@@ -318,7 +318,7 @@
     [progressView setHidden:YES];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(24.0f, 0.0f, 100.0f, 15.0f)];
-    label.text = @"Sending...";
+    label.text = NSLocalizedString(@"Sending", @"");
     label.font = [UIFont boldSystemFontOfSize:12.0];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];

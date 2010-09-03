@@ -41,7 +41,7 @@
     
     // Add label
     UILabel *label = [[UILabel alloc] init];
-    label.text = @"To:";
+    label.text = NSLocalizedString(@"To", @"");
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor grayColor];
     label.numberOfLines = 0;
@@ -55,7 +55,7 @@
     textField = [[UITextField alloc] initWithFrame:CGRectMake(40, 14.0, self.view.frame.size.width - 110, kContactPickerHeight - 24)];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    textField.placeholder = @"Enter phone number";   
+    textField.placeholder = NSLocalizedString(@"EnterPhoneNumber", @"");   
     textField.keyboardType = UIKeyboardTypePhonePad;
     textField.backgroundColor = [UIColor clearColor];
     textField.font = [UIFont systemFontOfSize:14.0];
