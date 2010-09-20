@@ -265,6 +265,7 @@
 					"\"$(SRCROOT)/../src/build/Debug-iphonesimulator\"",
 				);
 				PRODUCT_NAME = PTConversationViewDemo;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
