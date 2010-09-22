@@ -90,6 +90,7 @@
 	// getting the cell size
     CGRect contentRect = self.contentView.bounds;
 	CGFloat leftImageMargin = 0;
+    CGFloat leftTextMargin = 0;
     
     NSString *text = conversationMessage.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] 
@@ -107,6 +108,8 @@
         }     
         size.width += conversationMessage.thumbnailImage.size.width;
         leftImageMargin = conversationMessage.thumbnailImage.size.width + 3.0f;
+        
+        leftTextMargin = conversationMessage.thumbnailImage.size.width;
     }
     
     UIImage *ballon;
@@ -125,7 +128,7 @@
             self.ballonView.frame = CGRectMake(contentRect.size.width - (size.width + 28.0f), 18.0f, size.width + 28.0f, size.height + 20.0f);
             self.ballonView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
             
-            self.label.frame = CGRectMake((contentRect.size.width - 13.0f) - (size.width + 5.0f), 8.0f, size.width + 5.0f - conversationMessage.thumbnailImage.size.width, size.height + 35.0f);
+            self.label.frame = CGRectMake((contentRect.size.width - 13.0f) - (size.width + 5.0f), 8.0f, size.width + 5.0f, size.height + 35.0f);
             self.label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
             
             self.thumbnailImageView.frame = CGRectMake((contentRect.size.width - 12.0f) - (kThumbnailWidth + 5.0f), 26.0f, kThumbnailWidth, kThumbnailHeight);
