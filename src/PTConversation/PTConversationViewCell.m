@@ -94,12 +94,12 @@
     
     NSString *text = conversationMessage.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] 
-                   constrainedToSize:CGSizeMake(200.0f, 480.0f) 
+                   constrainedToSize:CGSizeMake(210.0f, 480.0f) 
                        lineBreakMode:UILineBreakModeCharacterWrap];
     
     NSString *textTime = [PTConversationHelper toConversationDateString:conversationMessage.date]; // e.g "Mar 9, 2010 1:22 PM";
     CGSize sizeTime = [textTime sizeWithFont:[UIFont systemFontOfSize:14.0] 
-                           constrainedToSize:CGSizeMake(200.0f, 480.0f) 
+                           constrainedToSize:CGSizeMake(210.0f, 480.0f) 
                                lineBreakMode:UILineBreakModeCharacterWrap];
 
     if([conversationMessage thumbnailImage] != nil) {
@@ -109,7 +109,7 @@
         size.width += conversationMessage.thumbnailImage.size.width;
         leftImageMargin = conversationMessage.thumbnailImage.size.width + 13.0f;
         
-        leftTextMargin = conversationMessage.thumbnailImage.size.width;
+        leftTextMargin = conversationMessage.thumbnailImage.size.width - 10.0f;
     }
     
     UIImage *ballon;

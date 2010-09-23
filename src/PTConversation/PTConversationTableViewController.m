@@ -66,7 +66,7 @@
      
     NSString *text = message.text;
     CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:14.0] 
-                   constrainedToSize:CGSizeMake(200.0f, 480.0f) 
+                   constrainedToSize:CGSizeMake(210.0f, 480.0f) 
                        lineBreakMode:UILineBreakModeWordWrap];
  
     // Calculate cell height
@@ -78,7 +78,7 @@
         }
     }
     
-    return calculatedHeight + 35.0f;
+    return calculatedHeight + 45.0f;
 }
 
 
