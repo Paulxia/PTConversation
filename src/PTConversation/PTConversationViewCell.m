@@ -109,7 +109,7 @@
         size.width += conversationMessage.thumbnailImage.size.width;
         leftImageMargin = conversationMessage.thumbnailImage.size.width + 13.0f;
         
-        leftTextMargin = conversationMessage.thumbnailImage.size.width - 10.0f;
+        leftTextMargin = conversationMessage.thumbnailImage.size.width + 10.0f;
     }
     
     UIImage *ballon;
