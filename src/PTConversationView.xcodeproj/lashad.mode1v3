@@ -302,7 +302,7 @@
 							<real>302</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>187 185 1733 993 0 0 1920 1178 </string>
+						<string>140 109 1733 993 0 0 1920 1178 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -332,7 +332,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>C675773F124A34310085D66B</string>
+										<string>C660D41F124B4C3C00006D4E</string>
 										<key>history</key>
 										<array>
 											<string>C6352E9311B7BB8F0075EA84</string>
@@ -349,8 +349,8 @@
 											<string>C61C959A1247E5CD00FC6A0B</string>
 											<string>C61C959E1247E61000FC6A0B</string>
 											<string>C61C959F1247E61000FC6A0B</string>
-											<string>C61C95A01247E61000FC6A0B</string>
-											<string>C61C95AD1247E8BD00FC6A0B</string>
+											<string>C660D41D124B4C3C00006D4E</string>
+											<string>C660D41E124B4C3C00006D4E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -362,14 +362,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1409, 673}}</string>
+								<string>{{0, 0}, {1409, 667}}</string>
 								<key>RubberWindowFrame</key>
-								<string>187 185 1733 993 0 0 1920 1178 </string>
+								<string>140 109 1733 993 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>673pt</string>
+							<string>667pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -382,14 +382,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 678}, {1409, 274}}</string>
+								<string>{{0, 672}, {1409, 280}}</string>
 								<key>RubberWindowFrame</key>
-								<string>187 185 1733 993 0 0 1920 1178 </string>
+								<string>140 109 1733 993 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>274pt</string>
+							<string>280pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -408,9 +408,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>C675773A124A32C40085D66B</string>
+				<string>C660D3B2124B43E400006D4E</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>C675773B124A32C40085D66B</string>
+				<string>C660D3B3124B43E400006D4E</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -552,7 +552,7 @@
 		<string>/Users/lashad/MyProjects/iPhone/JonglaApp/PTConversation/src/PTConversationView.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>187 185 1733 993 0 0 1920 1178 </string>
+	<string>140 109 1733 993 0 0 1920 1178 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -629,7 +629,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>C65CE27B117F219F00F21561</string>
-				<string>C675773C124A32C40085D66B</string>
+				<string>C660D3B4124B43E400006D4E</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
