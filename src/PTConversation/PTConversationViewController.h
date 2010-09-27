@@ -60,6 +60,9 @@ typedef enum {
 @property(nonatomic,retain) PTConversationMessage *currentSelectedMessage;
 @property(nonatomic,assign) BOOL showContact;
 
+@property(nonatomic,copy) NSString *saveTitle;
+
+    
 - (void) becomeEntryBar;
 - (void) resignEntryBar;
 - (void) becomeContact;

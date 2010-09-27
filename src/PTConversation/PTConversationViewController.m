@@ -26,6 +26,7 @@
 @synthesize progressView;
 @synthesize currentSelectedMessage;
 @synthesize delegate;
+@synthesize saveTitle;
 
 - (id)initWithStyle:(PTConversationViewStyle)style {
     if (self = [super init]) {
@@ -45,7 +46,7 @@
     
     CGRect rect = self.view.frame;
     
-    saveTitle = self.title;
+    self.saveTitle = self.title;
 
     // Initialize container
     _container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -390,7 +391,7 @@
     if(show) {
         self.title = @"";
     } else {
-        self.title = saveTitle;
+        self.title = self.saveTitle;
     }
 }
 
