@@ -254,7 +254,7 @@
             if([imagePicker.mediaTypes containsObject:@"public.movie"]) {
 //#ifdef __IPHONE_3_1
                 //imagePicker.allowsEditing = YES;
-                imagePicker.videoMaximumDuration = 180; // 3min
+                imagePicker.videoMaximumDuration = 300; // 5min
 //#else
                 //imagePicker.allowsImageEditing = YES;
                 
@@ -288,7 +288,7 @@
     UITableView *tView = self.conversationTableViewController.tableView;
     
     
-    [picker dismissModalViewControllerAnimated:YES];
+    [picker dismissModalViewControllerAnimated:NO];
     
     // Save current massage
     self.currentSelectedMessage = message;
