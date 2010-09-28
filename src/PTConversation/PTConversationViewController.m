@@ -280,8 +280,8 @@
 {
     BOOL send = TRUE;
     
-    [self.entryBarViewController.textView becomeFirstResponder];
-    
+    [self becomeEntryBar];
+        
     PTConversationMessage *message = [PTConversationHelper mediaInfoToMessage:picker 
                                                                          info:info 
                                                                          text:self.entryBarViewController.textView.text 
@@ -307,7 +307,7 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    [self.entryBarViewController.textView becomeFirstResponder];
+    [self becomeEntryBar];
     [self dismissModalViewControllerAnimated:YES];
 }
 
