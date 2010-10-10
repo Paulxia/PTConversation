@@ -17,6 +17,23 @@
 @end
 
 
+#define UIALERTVIEW_SHOWMODAL_BLOCKLOOP_SECONDS 0.01
+@implementation UIAlertView (ShowModal)
+
++ (void) alertWithTitle:(NSString*)title Message:(NSString*)message {
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:NULL cancelButtonTitle:@"OK" otherButtonTitles:NULL];
+	[alert showModal];
+	[alert release];
+}
+
+- (void) showModal {
+	[self show];
+	self.hidden = FALSE;
+	while (!self.hidden && self.superview != NULL) [[NSRunLoop mainRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:UIALERTVIEW_SHOWMODAL_BLOCKLOOP_SECONDS]];
+}
+
+@end
+
 
 @implementation PTContactViewController
 
@@ -59,7 +76,8 @@
     textField.keyboardType = UIKeyboardTypePhonePad;
     textField.backgroundColor = [UIColor clearColor];
     textField.font = [UIFont systemFontOfSize:14.0];
-    
+    //textField.text = @"+";
+    textField.delegate = self;
     //[textField  performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.5f];
     [self.view addSubview:textField];
     //[textField release];
@@ -81,6 +99,24 @@
     [self.delegate touchPlus:sender];
 }
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField_
+{
+    // Check international phone number
+    if(([textField_.text hasPrefix:@"+"] || [textField_.text hasPrefix:@"0"]) &&
+       [textField_.text length] > 6) {
+        return TRUE;
+    } 
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" 
+                                                    message:NSLocalizedString(@"PhoneNumberInternational", @"")
+                                                   delegate:self 
+                                          cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") 
+                                          otherButtonTitles:nil];
+    [alert showModal];	
+    [alert release];
+
+    return FALSE;
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
