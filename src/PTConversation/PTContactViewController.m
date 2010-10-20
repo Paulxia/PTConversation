@@ -96,14 +96,17 @@
 
 - (void)chooseContact:(id)sender
 {
+    textField.text = @"";
     [self.delegate touchPlus:sender];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField_
 {
+    NSLog(@"Length %@, %d\n", textField_.text, [textField_.text length]);
+    
     // Check international phone number
-    if(([textField_.text hasPrefix:@"+"] || [textField_.text hasPrefix:@"0"]) &&
-       [textField_.text length] > 6) {
+    if((([textField_.text hasPrefix:@"+"] || [textField_.text hasPrefix:@"0"]) &&
+       [textField_.text length] > 6) || [textField_.text length] == 0) {
         return TRUE;
     } 
 
