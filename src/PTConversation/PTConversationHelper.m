@@ -250,4 +250,20 @@
     return latestFile;
 }
 
+// Check phone number for intrnation format
+//
++ (BOOL)checkPhoneNumber:(NSString*)phoneNumber
+{
+    NSString *text = [phoneNumber stringByTrimmingCharactersInSet:
+                      [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    // Check international phone number
+    if((([text hasPrefix:@"+"] || [text hasPrefix:@"0"]) &&
+        [text length] > 6) || [text length] == 0) {
+        return TRUE;
+    } 
+    
+    return FALSE;
+}
+
 @end

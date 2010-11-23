@@ -13,7 +13,6 @@
 #import "PTConversationViewDemoAppDelegate.h"
 #import "DetailViewController.h"
 
-
 @implementation RootViewController
 
 @synthesize tableDataSource, CurrentTitle, CurrentLevel;
@@ -57,9 +56,47 @@
                 nil];
     
     
+    
     //[[self navigationController] setToolbarHidden:NO];
     //[[self navigationController] setNavigationBarHidden:YES];
+    
+    
+    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
+                                               initWithBarButtonSystemItem: UIBarButtonSystemItemCompose
+                                               target: self
+                                               action: @selector(new)] autorelease];
+    
+    self.navigationItem.rightBarButtonItem.enabled = YES;
 
+}
+
+#pragma mark Actions
+
+- (void) new 
+{
+    
+    PTConversationViewController *conversationViewController = [[PTConversationViewController alloc] initWithStyle:PTConversationViewStyleMedia]; 
+    conversationViewController.title = NSLocalizedString(@"New Conversation", @"");
+    conversationViewController.delegate = self;    
+    conversationViewController.showContact = TRUE;    
+
+    [[self navigationController] setToolbarHidden:YES];
+    [[self navigationController] pushViewController:conversationViewController animated:YES];
+    [conversationViewController release];
+    
+    //TTTableTextItem* item = [TTTableTextItem itemWithText:@"Lasha" URL:nil];
+    /*TTMessageController* controller =
+    [[[TTMessageController alloc] initWithRecipients:nil] autorelease];
+    controller.dataSource = [[[MockSearchDataSource alloc] init] autorelease];
+    controller.delegate = self;
+    
+    UINavigationController* navController = [[[UINavigationController alloc] init] autorelease];
+    [navController pushViewController:controller animated:NO];
+    [[self navigationController] presentModalViewController:navController animated:YES];
+    */
+    //[[self navigationController] setToolbarHidden:YES];
+    //[[self navigationController] presentModalViewController:controller animated:YES];
+    //[controller release];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,6 +146,13 @@
 
 #pragma mark -
 #pragma mark PTConversationViewController delegate methods
+
+- (void)touchPlus:(PTConversationViewController *)controller tableView:(UITableView*)tableView sender:(id)sender
+{
+    TTPickerTextField *textField = [[controller contactViewController] textField];
+    
+    [textField addCellWithObject:@"Kozla doev"];
+}
 
 - (BOOL)headerButton:(UIButton *)button
 {

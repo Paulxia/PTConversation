@@ -29,27 +29,28 @@
 	};
 	28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1204, 499}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1204, 613}}";
 			sepNavSelRange = "{204, 0}";
 			sepNavVisRange = "{0, 760}";
 		};
 	};
 	28C286E00D94DF7D0034E888 /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1204, 2899}}";
-			sepNavSelRange = "{296, 0}";
-			sepNavVisRange = "{3, 1043}";
+			sepNavIntBoundsRect = "{{0, 0}, {1204, 3211}}";
+			sepNavSelRange = "{5382, 0}";
+			sepNavVisRange = "{4810, 1390}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = C65CE3DB117F44B600F21561 /* PTConversationViewDemo */;
-		activeSDKPreference = iphonesimulator4.0;
+		activeSDKPreference = iphonesimulator4.1;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* PTConversationViewDemo */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* PTConversationViewDemo */,
 		);
 		breakpoints = (
+			C64F2EEF12928DB800E0F2B5 /* MockDataSource.m:531 */,
 		);
 		codeSenseManager = C65CE3E8117F44D500F21561 /* Code sense */;
 		executables = (
@@ -82,7 +83,7 @@
 			};
 			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
 				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
-				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
 					1026,
@@ -164,44 +165,54 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 305648767;
-			PBXWorkspaceStateSaveDate = 305648767;
+			PBXPerProjectTemplateStateSaveDate = 311849409;
+			PBXWorkspaceStateSaveDate = 311849409;
 		};
 		perUserProjectItems = {
-			C61303051237D06D00FEB7C2 /* PBXTextBookmark */ = C61303051237D06D00FEB7C2 /* PBXTextBookmark */;
-			C61303811237D4BE00FEB7C2 /* PBXTextBookmark */ = C61303811237D4BE00FEB7C2 /* PBXTextBookmark */;
-			C63C84DC11994C5F00498DBD /* PBXTextBookmark */ = C63C84DC11994C5F00498DBD /* PBXTextBookmark */;
+			C611FB7512952BAE00990385 /* PBXTextBookmark */ = C611FB7512952BAE00990385 /* PBXTextBookmark */;
+			C611FB7612952BAE00990385 /* PBXTextBookmark */ = C611FB7612952BAE00990385 /* PBXTextBookmark */;
+			C611FB7712952BAE00990385 /* PBXTextBookmark */ = C611FB7712952BAE00990385 /* PBXTextBookmark */;
+			C611FBFF12956EC400990385 /* PBXTextBookmark */ = C611FBFF12956EC400990385 /* PBXTextBookmark */;
+			C651C4351293DD31000E3140 /* PBXTextBookmark */ = C651C4351293DD31000E3140 /* PBXTextBookmark */;
+			C651C4401293DD79000E3140 /* PBXTextBookmark */ = C651C4401293DD79000E3140 /* PBXTextBookmark */;
+			C6529C6012967C4500FE9627 /* PBXTextBookmark */ = C6529C6012967C4500FE9627 /* PBXTextBookmark */;
 			C65CE403117F45D700F21561 /* PBXTextBookmark */ = C65CE403117F45D700F21561 /* PBXTextBookmark */;
 			C67393051181ED3500FD5CB6 /* PlistBookmark */ = C67393051181ED3500FD5CB6 /* PlistBookmark */;
 			C6E07EAC11954BDE00C7D659 /* PBXTextBookmark */ = C6E07EAC11954BDE00C7D659 /* PBXTextBookmark */;
-			C6E07EC811954C7600C7D659 /* PBXTextBookmark */ = C6E07EC811954C7600C7D659 /* PBXTextBookmark */;
 			C6E07EC911954C7600C7D659 /* PBXTextBookmark */ = C6E07EC911954C7600C7D659 /* PBXTextBookmark */;
 		};
 		sourceControlManager = C65CE3E7117F44D500F21561 /* Source Control */;
 		userBuildSettings = {
 		};
 	};
-	C61303051237D06D00FEB7C2 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 7";
-		rLen = 0;
-		rLoc = 126;
-		rType = 0;
-		vrLen = 1050;
-		vrLoc = 3;
+	C611FB29129515AC00990385 /* MockDataSource.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = MockDataSource.m;
+		path = /Users/lashad/MyProjects/iPhone/JonglaApp/PTConversation/src/PTConversation/MockDataSource.m;
+		sourceTree = "<absolute>";
 	};
-	C61303811237D4BE00FEB7C2 /* PBXTextBookmark */ = {
+	C611FB7512952BAE00990385 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		name = "RootViewController.m: 16";
+		fRef = C611FB29129515AC00990385 /* MockDataSource.m */;
+		name = "MockDataSource.m: 57";
 		rLen = 0;
-		rLoc = 296;
+		rLoc = 1296;
 		rType = 0;
-		vrLen = 1043;
-		vrLoc = 3;
+		vrLen = 563;
+		vrLoc = 570;
 	};
-	C63C84DC11994C5F00498DBD /* PBXTextBookmark */ = {
+	C611FB7612952BAE00990385 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C65CE3ED117F450300F21561 /* DetailViewController.m */;
+		name = "DetailViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 622;
+		vrLoc = 0;
+	};
+	C611FB7712952BAE00990385 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28C286DF0D94DF7D0034E888 /* RootViewController.h */;
 		name = "RootViewController.h: 10";
@@ -210,6 +221,85 @@
 		rType = 0;
 		vrLen = 760;
 		vrLoc = 0;
+	};
+	C611FBFF12956EC400990385 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 67";
+		rLen = 0;
+		rLoc = 2866;
+		rType = 0;
+		vrLen = 2574;
+		vrLoc = 1227;
+	};
+	C64F2EDD12928CFB00E0F2B5 /* MockDataSource.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = MockDataSource.m;
+		path = /Users/lashad/MyProjects/iPhone/JonglaApp/PTConversation/PTConversationViewDemo/Classes/MockDataSource.m;
+		sourceTree = "<absolute>";
+	};
+	C64F2EEF12928DB800E0F2B5 /* MockDataSource.m:531 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = C64F2EDD12928CFB00E0F2B5 /* MockDataSource.m */;
+		functionName = "-tableViewDidLoadModel:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 531;
+		modificationTime = 311852053.539818;
+		originalNumberOfMultipleMatches = 1;
+		state = 0;
+	};
+	C651C4351293DD31000E3140 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C651C4361293DD31000E3140 /* TTPickerTextField.m */;
+		name = "TTPickerTextField.m: 83";
+		rLen = 11;
+		rLoc = 2727;
+		rType = 0;
+		vrLen = 735;
+		vrLoc = 2437;
+	};
+	C651C4361293DD31000E3140 /* TTPickerTextField.m */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.objc;
+		name = TTPickerTextField.m;
+		path = /Users/lashad/MyProjects/iPhone/JonglaApp/PTConversation/three20/src/Three20UI/Sources/TTPickerTextField.m;
+		sourceTree = "<absolute>";
+	};
+	C651C4401293DD79000E3140 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = C651C4411293DD79000E3140 /* TTPickerTextField.h */;
+		name = "TTPickerTextField.h: 34";
+		rLen = 38;
+		rLoc = 1101;
+		rType = 0;
+		vrLen = 683;
+		vrLoc = 643;
+	};
+	C651C4411293DD79000E3140 /* TTPickerTextField.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = TTPickerTextField.h;
+		path = /Users/lashad/MyProjects/iPhone/JonglaApp/PTConversation/three20/Build/Products/three20/Three20UI/TTPickerTextField.h;
+		sourceTree = "<absolute>";
+	};
+	C6529C6012967C4500FE9627 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
+		name = "RootViewController.m: 132";
+		rLen = 0;
+		rLoc = 5382;
+		rType = 0;
+		vrLen = 1390;
+		vrLoc = 4810;
 	};
 	C65CE3DB117F44B600F21561 /* PTConversationViewDemo */ = {
 		isa = PBXExecutable;
@@ -266,9 +356,9 @@
 	};
 	C65CE3ED117F450300F21561 /* DetailViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1204, 518}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1204, 429}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 652}";
+			sepNavVisRange = "{0, 622}";
 		};
 	};
 	C65CE403117F45D700F21561 /* PBXTextBookmark */ = {
@@ -301,16 +391,6 @@
 		rLoc = 276;
 		rType = 0;
 		vrLen = 350;
-		vrLoc = 0;
-	};
-	C6E07EC811954C7600C7D659 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = C65CE3ED117F450300F21561 /* DetailViewController.m */;
-		name = "DetailViewController.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 652;
 		vrLoc = 0;
 	};
 	C6E07EC911954C7600C7D659 /* PBXTextBookmark */ = {

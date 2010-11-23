@@ -7,6 +7,9 @@
 //
 
 #import "PTContactViewController.h"
+#import "PTConversationHelper.h"
+
+#import "MockDataSource.h"
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Private Methods
@@ -47,15 +50,23 @@
     [super viewDidLoad];
     
     
-    [self createContactPicker];
+    //[self createContactPicker];
 }
 
 
-- (void)createContactPicker
-{
-
-    self.view.backgroundColor = [UIColor whiteColor];
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)loadView {
+    [super loadView];
+    self.view.backgroundColor = TTSTYLEVAR(backgroundColor);
     
+    _scrollView = [[[UIScrollView class] alloc] initWithFrame:self.view.frame];
+    _scrollView.backgroundColor = TTSTYLEVAR(backgroundColor);
+    _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    _scrollView.canCancelContentTouches = NO;
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.showsHorizontalScrollIndicator = NO;
+    [self.view addSubview:_scrollView];
+
     // Add label
     UILabel *label = [[UILabel alloc] init];
     label.text = NSLocalizedString(@"To", @"");
@@ -65,18 +76,21 @@
     label.lineBreakMode = UILineBreakModeWordWrap;
     label.font = [UIFont systemFontOfSize:14.0];
     label.frame = CGRectMake(10, 0, 60.0f, kContactPickerHeight);
-    [self.view addSubview:label];
+    [_scrollView addSubview:label];
     [label release];
     
+  
     // Add Text field
-    textField = [[UITextField alloc] initWithFrame:CGRectMake(40, 14.0, self.view.frame.size.width - 110, kContactPickerHeight - 24)];
-    textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    textField = [[TTPickerTextField alloc] initWithFrame:CGRectMake(40, 5.0, self.view.frame.size.width - 110, kContactPickerHeight - 3)];
+    //textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     textField.placeholder = NSLocalizedString(@"EnterPhoneNumber", @"");   
     textField.keyboardType = UIKeyboardTypePhonePad;
     textField.backgroundColor = [UIColor clearColor];
     textField.font = [UIFont systemFontOfSize:14.0];
-    //textField.text = @"+";
+    
+    textField.dataSource = [[[MockSearchDataSource alloc] init] autorelease];
+    textField.text = @"";
     textField.delegate = self;
     //[textField  performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.5f];
     [self.view addSubview:textField];
@@ -87,9 +101,33 @@
     [addButton setFrame:CGRectMake(self.view.frame.size.width - 35, 9, 32, 30)];
     [addButton addTarget:self action:@selector(chooseContact:) forControlEvents:UIControlEventTouchUpInside];
     addButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth;
-    [self.view addSubview:addButton];
+    [_scrollView addSubview:addButton];
+    
+    //[self layoutViews];
 }
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)layoutViews {
+    CGFloat y = 0;
+    
+    for (UIView* view in _scrollView.subviews) {
+    //    view.frame = CGRectMake(0, y, self.view.width, view.height);
+        y += view.height;
+    }
+    
+    self.view.frame = CGRectMake(0, 0, self.view.width, textField.height + 7);
+  //  _scrollView.frame = CGRectMake(0, 0, self.view.width, 200);
+    
+    NSLog(@"Height %f", textField.height);
+    
+    //_scrollView.contentSize = CGSizeMake(_scrollView.width, y);
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)textFieldDidResize:(TTPickerTextField*)textField {
+    [self layoutViews];
+}
 
 #pragma mark -
 #pragma mark Action methods
@@ -104,21 +142,21 @@
 {
     NSLog(@"Length %@, %d\n", textField_.text, [textField_.text length]);
     
-    // Check international phone number
-    if((([textField_.text hasPrefix:@"+"] || [textField_.text hasPrefix:@"0"]) &&
-       [textField_.text length] > 6) || [textField_.text length] == 0) {
-        return TRUE;
-    } 
-
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" 
-                                                    message:NSLocalizedString(@"PhoneNumberInternational", @"")
-                                                   delegate:self 
-                                          cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") 
-                                          otherButtonTitles:nil];
-    [alert showModal];	
-    [alert release];
-
-    return FALSE;
+    if(![PTConversationHelper checkPhoneNumber:textField_.text]) {
+    
+  
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" 
+                                                        message:NSLocalizedString(@"PhoneNumberInternational", @"")
+                                                       delegate:self 
+                                              cancelButtonTitle:NSLocalizedString(@"Dismiss", @"") 
+                                              otherButtonTitles:nil];
+        [alert showModal];	
+        [alert release];
+        
+        return FALSE;
+    }
+    
+    return TRUE;
 }
 
 /*
@@ -136,14 +174,12 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-    
-    self.textField = nil;
+    TT_RELEASE_SAFELY(_scrollView);
+    //TT_RELEASE_SAFELY(self.textField);
 }
-
 
 - (void)dealloc {
     [textField release];

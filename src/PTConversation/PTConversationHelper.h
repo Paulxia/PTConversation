@@ -23,5 +23,6 @@
 + (PTConversationMessage*)mediaInfoToMessage:(UIImagePickerController *)picker info:(NSDictionary *)info text:(NSString*)text type:(PTConversationMessageType)type;
 + (UIImage*)toThumbnail:(UIImagePickerController *)picker;
 + (NSString*)getLatestFileFromPath:(NSString*)path extention:(NSString*)extention;
++ (BOOL)checkPhoneNumber:(NSString*)phoneNumber;
 
 @end

@@ -8,20 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Three20/Three20.h"
+#import "Three20UI/UIViewAdditions.h"
+
 // Contact picker height
 #define kContactPickerHeight    45.0
 
 @protocol PTContactViewControllerDelegate;
 
-@interface PTContactViewController : UIViewController {
+@interface PTContactViewController : TTViewController <UITextFieldDelegate> {
 
-    UITextField     *textField;
+    UIScrollView*     _scrollView;
+    
+    TTPickerTextField     *textField;
     
     id <PTContactViewControllerDelegate>    delegate;
 }
 
 @property (nonatomic,assign) id <PTContactViewControllerDelegate>    delegate;
-@property (nonatomic,retain) UITextField  *textField;
+@property (nonatomic,retain) TTPickerTextField  *textField;
+
+- (void)layoutViews;
 
 @end
 

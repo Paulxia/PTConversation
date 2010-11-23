@@ -71,7 +71,7 @@
     contactViewController.delegate = self;
     [contactViewController.view setHidden:!self.showContact];
     contactViewController.view.frame = CGRectMake(0, 0, rect.size.width, kContactPickerHeight);
-    contactViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth; // | UIViewAutoresizingFlexibleTopMargin;
+    contactViewController.view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [_container addSubview:contactViewController.view];
     
     [self.view addSubview:_container];

@@ -18,6 +18,7 @@
 		C61D394E118704B300878897 /* libPTConversationView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61D39081186FC9200878897 /* libPTConversationView.a */; };
 		C64C6DF21180607000952CE6 /* PTConversationView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C64C6DF11180607000952CE6 /* PTConversationView.bundle */; };
 		C65CE3EE117F450300F21561 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C65CE3ED117F450300F21561 /* DetailViewController.m */; };
+		C67EE18E12929DA500CEBB87 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67EE18D12929DA500CEBB87 /* QuartzCore.framework */; };
 		C6DDF7561185E30800A01150 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DDF7551185E30800A01150 /* AddressBook.framework */; };
 		C6DDF7581185E30800A01150 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DDF7571185E30800A01150 /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
@@ -57,8 +58,9 @@
 		C64C6DF11180607000952CE6 /* PTConversationView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PTConversationView.bundle; path = ../src/PTConversationView.bundle; sourceTree = SOURCE_ROOT; };
 		C65CE3EC117F450300F21561 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		C65CE3ED117F450300F21561 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		C6DDF7551185E30800A01150 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
-		C6DDF7571185E30800A01150 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		C67EE18D12929DA500CEBB87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = iphoneos3.0/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<group>"; };
+		C6DDF7551185E30800A01150 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = iphoneos3.0/System/Library/Frameworks/AddressBook.framework; sourceTree = "<group>"; };
+		C6DDF7571185E30800A01150 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = iphoneos3.0/System/Library/Frameworks/AddressBookUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				C6DDF7561185E30800A01150 /* AddressBook.framework in Frameworks */,
 				C6DDF7581185E30800A01150 /* AddressBookUI.framework in Frameworks */,
+				C67EE18E12929DA500CEBB87 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +110,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				C6DDF7551185E30800A01150 /* AddressBook.framework */,
-				C6DDF7571185E30800A01150 /* AddressBookUI.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -137,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				C64C68AD117F48DF00952CE6 /* PTConversationView.xcodeproj */,
+				C6DDF7571185E30800A01150 /* AddressBookUI.framework */,
+				C67EE18D12929DA500CEBB87 /* QuartzCore.framework */,
+				C6DDF7551185E30800A01150 /* AddressBook.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
@@ -180,6 +184,7 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PTConversationViewDemo" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -258,14 +263,22 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PTConversationViewDemo_Prefix.pch;
-				HEADER_SEARCH_PATHS = ../src;
+				HEADER_SEARCH_PATHS = (
+					../three20/Build/Products/three20,
+					../src,
+				);
 				INFOPLIST_FILE = "PTConversationViewDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../src/build/Debug-iphonesimulator\"",
 				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = PTConversationViewDemo;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
