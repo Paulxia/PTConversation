@@ -278,7 +278,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = PTConversationViewDemo;
-				SDKROOT = iphoneos4.1;
+				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
 		};
@@ -310,7 +310,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ../PTConversationView/Classes;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.0;
+				SDKROOT = iphoneos4.2;
 			};
 			name = Debug;
 		};

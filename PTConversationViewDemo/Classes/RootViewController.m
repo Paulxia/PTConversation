@@ -149,9 +149,7 @@
 
 - (void)touchPlus:(PTConversationViewController *)controller tableView:(UITableView*)tableView sender:(id)sender
 {
-    TTPickerTextField *textField = [[controller contactViewController] textField];
-    
-    [textField addCellWithObject:@"Kozla doev"];
+
 }
 
 - (BOOL)headerButton:(UIButton *)button

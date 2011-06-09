@@ -9,7 +9,7 @@
 #import "PTContactViewController.h"
 #import "PTConversationHelper.h"
 
-#import "MockDataSource.h"
+
 
 ///////////////////////////////////////////////////////////////////////////////////
 // Private Methods
@@ -57,10 +57,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadView {
     [super loadView];
-    self.view.backgroundColor = TTSTYLEVAR(backgroundColor);
+    self.view.backgroundColor = [UIColor whiteColor];
     
     _scrollView = [[[UIScrollView class] alloc] initWithFrame:self.view.frame];
-    _scrollView.backgroundColor = TTSTYLEVAR(backgroundColor);
+    _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     _scrollView.canCancelContentTouches = NO;
     _scrollView.showsVerticalScrollIndicator = NO;
@@ -81,7 +81,7 @@
     
   
     // Add Text field
-    textField = [[TTPickerTextField alloc] initWithFrame:CGRectMake(40, 5.0, self.view.frame.size.width - 110, kContactPickerHeight - 3)];
+    textField = [[UITextField alloc] initWithFrame:CGRectMake(40, 5.0, self.view.frame.size.width - 110, kContactPickerHeight - 3)];
     //textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     textField.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     textField.placeholder = NSLocalizedString(@"EnterPhoneNumber", @"");   
@@ -89,7 +89,7 @@
     textField.backgroundColor = [UIColor clearColor];
     textField.font = [UIFont systemFontOfSize:14.0];
     
-    textField.dataSource = [[[MockSearchDataSource alloc] init] autorelease];
+    //textField.dataSource = [[[MockSearchDataSource alloc] init] autorelease];
     textField.text = @"";
     textField.delegate = self;
     //[textField  performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.5f];
@@ -109,23 +109,10 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)layoutViews {
-    CGFloat y = 0;
-    
-    for (UIView* view in _scrollView.subviews) {
-    //    view.frame = CGRectMake(0, y, self.view.width, view.height);
-        y += view.height;
-    }
-    
-    self.view.frame = CGRectMake(0, 0, self.view.width, textField.height + 7);
-  //  _scrollView.frame = CGRectMake(0, 0, self.view.width, 200);
-    
-    NSLog(@"Height %f", textField.height);
-    
-    //_scrollView.contentSize = CGSizeMake(_scrollView.width, y);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)textFieldDidResize:(TTPickerTextField*)textField {
+- (void)textFieldDidResize:(UITextField*)textField {
     [self layoutViews];
 }
 
@@ -177,7 +164,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)viewDidUnload {
     [super viewDidUnload];
-    TT_RELEASE_SAFELY(_scrollView);
+    [_scrollView release];
     //TT_RELEASE_SAFELY(self.textField);
 }
 
