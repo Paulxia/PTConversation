@@ -165,8 +165,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 329324643;
-			PBXWorkspaceStateSaveDate = 329324643;
+			PBXPerProjectTemplateStateSaveDate = 329325653;
+			PBXWorkspaceStateSaveDate = 329325653;
 		};
 		perUserProjectItems = {
 			C611FB7512952BAE00990385 = C611FB7512952BAE00990385 /* PBXTextBookmark */;
@@ -178,22 +178,25 @@
 			C6529C6012967C4500FE9627 = C6529C6012967C4500FE9627 /* PBXTextBookmark */;
 			C65CE403117F45D700F21561 = C65CE403117F45D700F21561 /* PBXTextBookmark */;
 			C67393051181ED3500FD5CB6 = C67393051181ED3500FD5CB6 /* PlistBookmark */;
+			C6A4BA7013A11CBD00BF475F /* PlistBookmark */ = C6A4BA7013A11CBD00BF475F /* PlistBookmark */;
+			C6A4BA7F13A11CCB00BF475F /* PlistBookmark */ = C6A4BA7F13A11CCB00BF475F /* PlistBookmark */;
+			C6A4BA8413A11D0400BF475F /* PlistBookmark */ = C6A4BA8413A11D0400BF475F /* PlistBookmark */;
 			C6E07EAC11954BDE00C7D659 = C6E07EAC11954BDE00C7D659 /* PBXTextBookmark */;
 			C6E07EC911954C7600C7D659 = C6E07EC911954C7600C7D659 /* PBXTextBookmark */;
-			C6FA3F5C13A118DA00085A77 /* PBXTextBookmark */ = C6FA3F5C13A118DA00085A77 /* PBXTextBookmark */;
-			C6FA3F5D13A118DA00085A77 /* XCBuildMessageTextBookmark */ = C6FA3F5D13A118DA00085A77 /* XCBuildMessageTextBookmark */;
-			C6FA3F5F13A118DA00085A77 /* PBXTextBookmark */ = C6FA3F5F13A118DA00085A77 /* PBXTextBookmark */;
-			C6FA3F6713A1194F00085A77 /* PBXTextBookmark */ = C6FA3F6713A1194F00085A77 /* PBXTextBookmark */;
-			C6FA3F7113A11A4D00085A77 /* PBXTextBookmark */ = C6FA3F7113A11A4D00085A77 /* PBXTextBookmark */;
-			C6FA3F7213A11A4D00085A77 /* XCBuildMessageTextBookmark */ = C6FA3F7213A11A4D00085A77 /* XCBuildMessageTextBookmark */;
-			C6FA3F7313A11A4D00085A77 /* PBXTextBookmark */ = C6FA3F7313A11A4D00085A77 /* PBXTextBookmark */;
-			C6FA3F9013A11A9200085A77 /* PBXTextBookmark */ = C6FA3F9013A11A9200085A77 /* PBXTextBookmark */;
-			C6FA3F9113A11A9200085A77 /* XCBuildMessageTextBookmark */ = C6FA3F9113A11A9200085A77 /* XCBuildMessageTextBookmark */;
-			C6FA3F9213A11A9200085A77 /* PBXTextBookmark */ = C6FA3F9213A11A9200085A77 /* PBXTextBookmark */;
-			C6FA3F9713A11AA800085A77 /* PBXTextBookmark */ = C6FA3F9713A11AA800085A77 /* PBXTextBookmark */;
-			C6FA3F9E13A11AB100085A77 /* PBXTextBookmark */ = C6FA3F9E13A11AB100085A77 /* PBXTextBookmark */;
-			C6FA3F9F13A11AFF00085A77 /* PBXTextBookmark */ = C6FA3F9F13A11AFF00085A77 /* PBXTextBookmark */;
-			C6FA3FB013A11B7B00085A77 /* PBXTextBookmark */ = C6FA3FB013A11B7B00085A77 /* PBXTextBookmark */;
+			C6FA3F5C13A118DA00085A77 = C6FA3F5C13A118DA00085A77 /* PBXTextBookmark */;
+			C6FA3F5D13A118DA00085A77 = C6FA3F5D13A118DA00085A77 /* PBXTextBookmark */;
+			C6FA3F5F13A118DA00085A77 = C6FA3F5F13A118DA00085A77 /* PBXTextBookmark */;
+			C6FA3F6713A1194F00085A77 = C6FA3F6713A1194F00085A77 /* PBXTextBookmark */;
+			C6FA3F7113A11A4D00085A77 = C6FA3F7113A11A4D00085A77 /* PBXTextBookmark */;
+			C6FA3F7213A11A4D00085A77 = C6FA3F7213A11A4D00085A77 /* PBXTextBookmark */;
+			C6FA3F7313A11A4D00085A77 = C6FA3F7313A11A4D00085A77 /* PBXTextBookmark */;
+			C6FA3F9013A11A9200085A77 = C6FA3F9013A11A9200085A77 /* PBXTextBookmark */;
+			C6FA3F9113A11A9200085A77 = C6FA3F9113A11A9200085A77 /* PBXTextBookmark */;
+			C6FA3F9213A11A9200085A77 = C6FA3F9213A11A9200085A77 /* PBXTextBookmark */;
+			C6FA3F9713A11AA800085A77 = C6FA3F9713A11AA800085A77 /* PBXTextBookmark */;
+			C6FA3F9E13A11AB100085A77 = C6FA3F9E13A11AB100085A77 /* PBXTextBookmark */;
+			C6FA3F9F13A11AFF00085A77 = C6FA3F9F13A11AFF00085A77 /* PBXTextBookmark */;
+			C6FA3FB013A11B7B00085A77 = C6FA3FB013A11B7B00085A77 /* PBXTextBookmark */;
 		};
 		sourceControlManager = C65CE3E7117F44D500F21561 /* Source Control */;
 		userBuildSettings = {
@@ -267,7 +270,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 531;
-		modificationTime = 329325237.987545;
+		modificationTime = 329325756.409788;
 		originalNumberOfMultipleMatches = 1;
 		state = 0;
 	};
@@ -322,7 +325,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -397,6 +400,41 @@
 		rLen = 0;
 		rLoc = 9223372036854775808;
 	};
+	C6A4BA7013A11CBD00BF475F /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* PTConversationViewDemo-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/lashad/MyProjects/iPhone/PTConversation/PTConversationViewDemo/PTConversationViewDemo-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C6A4BA7F13A11CCB00BF475F /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* PTConversationViewDemo-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/lashad/MyProjects/iPhone/PTConversation/PTConversationViewDemo/PTConversationViewDemo-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	C6A4BA8413A11D0400BF475F /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* PTConversationViewDemo-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/lashad/MyProjects/iPhone/PTConversation/PTConversationViewDemo/PTConversationViewDemo-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
 	C6E07EAC11954BDE00C7D659 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28A0AAE50D9B0CCF005BE974 /* PTConversationViewDemo_Prefix.pch */;
@@ -423,12 +461,6 @@
 		name = PTContactViewController.h;
 		path = ../src/PTConversation/PTContactViewController.h;
 		sourceTree = "<group>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1204, 609}}";
-			sepNavSelRange = "{182, 0}";
-			sepNavVisRange = "{0, 754}";
-			sepNavWindowFrame = "{{15, 353}, {972, 820}}";
-		};
 	};
 	C6FA3F5813A118B600085A77 /* PTContactViewController.m */ = {
 		isa = PBXFileReference;
@@ -436,12 +468,6 @@
 		name = PTContactViewController.m;
 		path = /Users/lashad/MyProjects/iPhone/PTConversation/src/PTConversation/PTContactViewController.m;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 2327}}";
-			sepNavSelRange = "{4459, 0}";
-			sepNavVisRange = "{2389, 999}";
-			sepNavWindowFrame = "{{38, 332}, {972, 820}}";
-		};
 	};
 	C6FA3F5C13A118DA00085A77 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -453,11 +479,10 @@
 		vrLen = 1476;
 		vrLoc = 4761;
 	};
-	C6FA3F5D13A118DA00085A77 /* XCBuildMessageTextBookmark */ = {
+	C6FA3F5D13A118DA00085A77 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "Three20/Three20.h: No such file or directory";
 		fRef = C6FA3F5E13A118DA00085A77 /* PTContactViewController.h */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 10;
 		rType = 1;
@@ -468,11 +493,6 @@
 		name = PTContactViewController.h;
 		path = /Users/lashad/MyProjects/iPhone/PTConversation/src/PTConversation/PTContactViewController.h;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1204, 609}}";
-			sepNavSelRange = "{446, 0}";
-			sepNavVisRange = "{0, 754}";
-		};
 	};
 	C6FA3F5F13A118DA00085A77 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -504,11 +524,10 @@
 		vrLen = 190;
 		vrLoc = 100;
 	};
-	C6FA3F7213A11A4D00085A77 /* XCBuildMessageTextBookmark */ = {
+	C6FA3F7213A11A4D00085A77 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "'TTPickerTextField' undeclared (first use in this function)";
 		fRef = C6FA3F5813A118B600085A77 /* PTContactViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 83;
 		rType = 1;
@@ -533,11 +552,10 @@
 		vrLen = 439;
 		vrLoc = 3;
 	};
-	C6FA3F9113A11A9200085A77 /* XCBuildMessageTextBookmark */ = {
+	C6FA3F9113A11A9200085A77 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "'TTPickerTextField' undeclared (first use in this function)";
 		fRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */;
-		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
 		rLoc = 151;
 		rType = 1;
